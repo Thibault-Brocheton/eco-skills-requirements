@@ -1,4 +1,4 @@
-﻿namespace SkillsRequirements
+namespace SkillsRequirements
 {
     using Eco.Core.Plugins.Interfaces;
     using Eco.Core.Plugins;
@@ -244,6 +244,27 @@
             SkillsRequirementsPlugin.Obj.SaveConfig();
 
             user.MsgLocStr($"{targetUser} will not be allowed anymore to learn {skillName} without requirements.");
+        }
+
+        [ChatSubCommand("SkillsRequirements", "Update DontLearnBeforeDay value of a skill", ChatAuthorizationLevel.Admin)]
+        public static void UpdateDontLearnBeforeDay(User user, string skillName, float day)
+        {
+            if (Skill.AllSkills.FirstOrDefault(s => s.Name == skillName) == null)
+            {
+                user.ErrorLocStr($"Can't find skill {skillName}");
+                return;
+            }
+
+            if (day < 0f)
+            {
+                user.ErrorLocStr($"Day can't be negative");
+                return;
+            }
+
+            SkillsRequirementsPlugin.Obj.Config.DontLearnBeforeDay[skillName] = day;
+            SkillsRequirementsPlugin.Obj.SaveConfig();
+
+            user.MsgLocStr($"{skillName} can now be learned only until day {day} is reached. Current day is {Text.Num(WorldTime.Day)}");
         }
     }
 }
