@@ -140,12 +140,9 @@ namespace SkillsRequirements
             {
                 var cost = Obj.Config.CustomStarCost.GetValueOrDefault(currentSkillName, 1);
 
-                if (cost > 1)
-                {
-                    user.InfoBoxLoc($"[SkillsRequirements Mod] The skill {currentSkillName} requires {cost} stars.");
+                user.InfoBoxLoc($"[SkillsRequirements Mod] The skill {currentSkillName} requires {cost} stars.");
 
-                    return cost;
-                }
+                return cost;
             }
 
             return int.MaxValue;
