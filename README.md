@@ -10,13 +10,11 @@ As an admin you can run a command to allow some specific user to bypass these re
 
 ## Commands
 
-```
 * /SkillsRequirements
   * /SkillsRequirements Toggle true?                              : Disable or Enable the mod. Add true if you want to save this change in the config file.
   * /SkillsRequirements AllowBypass User, skillName               : Allow a player to bypass requirements of a skill (He will still need the custom amont of stars, if set)
   * /SkillsRequirements DisallowBypass User, skillName            : Disallow a player to bypass requirements of a skill
   * /SkillsRequirements UpdateDontLearnBeforeDay skillName, day   : Update the day before a skill can be learned, without having to restart the server
-```
 
 ## Configuration
 
