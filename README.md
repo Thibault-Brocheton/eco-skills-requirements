@@ -1,4 +1,4 @@
-# Eco Skills Requirements
+# ⭐ Eco Skills Requirements
 
 This mod allows you to configure requirements for skills, so when a user wants to learn it by spending a star, he will have to:
 - already have some other skills
@@ -8,7 +8,7 @@ This mod allows you to configure requirements for skills, so when a user wants t
 
 As an admin you can run a command to allow some specific user to bypass these requirements.
 
-## Commands
+## 🖹 Commands
 
 * /SkillsRequirements
   * /SkillsRequirements Toggle true?                              : Disable or Enable the mod. Add true if you want to save this change in the config file.
@@ -16,7 +16,7 @@ As an admin you can run a command to allow some specific user to bypass these re
   * /SkillsRequirements DisallowBypass User, skillName            : Disallow a player to bypass requirements of a skill
   * /SkillsRequirements UpdateDontLearnBeforeDay skillName, day   : Update the day before a skill can be learned, without having to restart the server
 
-## Configuration
+## ⚙️ Configuration
 
 The mod is configured with a SkillsRequirements.eco file in Configs (generated at the first start)
 With following structure:
